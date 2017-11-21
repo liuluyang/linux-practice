@@ -7,3 +7,6 @@
 liru:
 sudo ln -s /opt/pycharm-2017.1.3/bin/pycharm.sh /usr/bin/pycharm
 注：pycharm.sh需要完整路径
+
+官网介绍：
+https://confluence.jetbrains.com/display/PYH/Installing+PyCharm+on+Linux+according+to+FHS
