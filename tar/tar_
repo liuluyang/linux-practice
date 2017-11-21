@@ -1,0 +1,10 @@
+
+
+打包压缩文件夹
+tar -zcvf  {file_new_name}.tar.gz  dir_name
+
+检查压缩文件是否有损坏
+tar -zvtf {file_new_name}.tar.gz
+
+解压文件
+tar -zxvf {file_new_name}.tar.gz

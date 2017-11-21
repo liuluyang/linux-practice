@@ -1,0 +1,50 @@
+配置yum源
+编辑或增加/etc/yum.repos.d/里面的文件来配置
+或者找一份完整的进行替换yum.repos.d
+自行配置略
+
+yum search mariadb
+查看可安装的mariadb相关的包
+yum install mariadb
+进行安装
+
+rpm -qa | grep Maria*
+查看已经安装的包
+结果：
+MariaDB-common-10.1.10-1.el7.centos.x86_64
+MariaDB-client-10.1.10-1.el7.centos.x86_64
+MariaDB-server-10.1.10-1.el7.centos.x86_64
+MariaDB-shared-10.1.10-1.el7.centos.x86_64
+MariaDB-compat-10.1.10-1.el7.centos.x86_64
+如果有遗漏 自行安装
+例如：
+yum install MariaDB-compat.x86_64 MariaDB-shared.x86_64
+
+因为当时yum源配置出错，所以yum install mariadb时出错
+用rpm -qa | grep mysql 查看 结果错误的安装了mysql
+解决办法：
+yum -y remove mysql*
+
+命令：
+>>mysql
+出错
+可能会提示找不到mysql.sock
+解决办法：
+在/var/lib/mysql/下创建mysql.sock
+touch mysql.sock
+然后修改该文件权限属主
+chmod 777  mysql.sock
+chown mysql mysql.sock
+
+在输入mysql可能还会出错
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111 "Connection refused")
+
+service mysql status
+查看mysql状态
+service mysql start
+启动mysql服务
+
+
+
+
+

@@ -1,0 +1,9 @@
+官网下载pycharm的tar.gz包
+然后用tar解压
+进入解压文件的bin目录
+试着运行./pycharm.sh
+
+创建快捷方式
+liru:
+sudo ln -s /opt/pycharm-2017.1.3/bin/pycharm.sh /usr/bin/pycharm
+注：pycharm.sh需要完整路径
